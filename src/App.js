@@ -9,14 +9,14 @@ function App() {
     <BrowserRouter>
       <div>
         <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/our-history" activeStyle={{ color: "red" }}>History</NavLink></li>
+          <li><NavLink exact to="/" activeStyle={{ color: "red" }}>Home</NavLink></li>
+          <li><NavLink exact to="/our-history" activeStyle={{ color: "red" }}>History</NavLink></li>
         </ul>
       </div>
 
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/our-history" component={History} />
+        <Route exact path="/our-history" component={History} />
       </Switch>
     </BrowserRouter>
   );
